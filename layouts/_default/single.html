@@ -28,7 +28,24 @@
           {{ .TableOfContents }}
       </aside>
       {{end}}
-      {{.Content}}
+
+       {{$wikilinks := .Content | findRE "[\\[]{2}([A-Za-z0-9\\s]+)[\\]]{2}" }}
+        {{$temp_content := $.Content}}
+        {{range $wikilinks}}
+            {{$match := "0"}}
+            {{$page_title := . | strings.TrimPrefix "[[" | strings.TrimSuffix "]]" }}
+            {{$human_title := humanize $page_title}}
+            {{$lower_title := lower $page_title}}
+            {{$title_array := (slice $page_title $human_title $lower_title)}}
+            {{range first 1 (where site.Pages "Params.title" "in" $title_array)}}
+                {{$temp_content = ($temp_content | replaceRE (printf "[\\[]{0,2}%s[\\]]{0,2}" $page_title) (printf "<a href=\"%s\">%s</a>" .Permalink $page_title) )}}
+                {{$match = "1"}}
+            {{end}}
+            {{if ne $match "1"}}
+                {{$temp_content = ($temp_content | replaceRE (printf "[\\[]{0,2}%s[\\]]{0,2}" $page_title)  (printf "<strong style='color:#07add9;'>%s</strong>" $page_title ))}}
+            {{end}}
+        {{end}}
+        {{$temp_content  | safeHTML}}
 
     </article>
     {{partial "footer.html" .}}
