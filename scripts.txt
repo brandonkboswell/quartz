@@ -1,0 +1,1 @@
+rm -rf ~/Sites/quartz/content/*; obsidian-export ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/bkb ./content; make

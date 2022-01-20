@@ -1,13 +1,16 @@
-name: Jacky Zhao
-enableToc: true
+name: Brandon Boswell
+enableToc: false
 enableLinkPreview: true
 description:
-  Here is the page description. This is an example Quartz site that details installation,
-  setup, customization, and troubleshooting for Quartz itself.
+  Full Stack, UI/UX Designer and Front End Developer
 page_title:
-  "🪴 Quartz 3"
+  "Brandon K Boswell"
 links:
   - link_name: Twitter
-    link: https://twitter.com/_jzhao
+    link: https://twitter.com/brandonkboswell
+  - link_name: YouTube
+    link: https://youtube.com/brandonkboswell
   - link_name: Github
-    link: https://github.com/jackyzha0
+    link: https://github.com/brandonkboswell
+  - link_name: Dorsata
+    link: https://www.dorsata.com
