@@ -1,6 +1,6 @@
-baseURL = "https://brandonkboswell.github.io/quartz/"
+baseURL = "https://brandonkboswell.com"
 languageCode = "en-us"
-googleAnalytics = "G-XYFD95KB4J"
+googleAnalytics = "G-V9PR00CYK8"
 pygmentsUseClasses = true
 relativeURLs = true
 disablePathToLower = true
@@ -8,6 +8,10 @@ ignoreFiles = [
   "/content/templates/*",
   "/content/private/*",
   "/content/1-1/*",
+  "/content/business/*",
+  "/content/collections/*",
+  "/content/people/*",
+  "/content/to_publish/*",
   "/content/files/*",
   "/content/temporal/*",
   "/content/personal/*",
@@ -15,7 +19,7 @@ ignoreFiles = [
   "/content/.obsidian/*"
 ]
 summaryLength = 20
-paginate = 10
+paginate = 20
 enableGitInfo = true
 
 [markup]

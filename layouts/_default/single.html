@@ -14,9 +14,16 @@
   </header>
   <article>
       {{if .Title}}<h1>{{ .Title }}</h1>{{end}}
-      <p class="meta">
-          Last updated {{if ne .Date .Lastmod}}{{ .Lastmod.Format "January 2, 2006" }}{{else}}Unknown{{end}}
-      </p>
+      {{if .Date}}
+        <p class="meta">
+          Published {{ .Date.Format "January 2, 2006" }}
+        </p>
+      {{end}}
+      {{if ne .Date .Lastmod}}
+        <p class="meta">
+          Last Updated {{ .Lastmod.Format "January 2, 2006" }}
+        </p>
+      {{end}}
       <ul class="tags">
           {{ range (.GetTerms "tags") }}
           <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li>
