@@ -3,11 +3,20 @@
     <li class="section-li">
         <div class="section">
             <div class="desc">
-                <h3><a href="{{ .Permalink }}">{{- .Title -}}</a></h3>
-                <p>{{- .Summary -}}{{if .Truncated}}...{{end}}</p>
+                {{if .Title}}...{{end}}
+
+                <h3><a href="{{ .Permalink }}">
+                  {{if .Title}}
+                      {{- .Title -}}
+                  {{else}}
+                      {{ $fileName := path.Base .File.Path}}
+                      {{strings.TrimSuffix ".md" $fileName}}
+                  {{end}}
+                </a></h3>
+                <!-- <p>{{- .Summary -}}{{if .Truncated}}...{{end}}</p> -->
             </div>
             <p class="meta">
-                {{ .ReadingTime }} minute read. Last updated {{if ne .Date .Lastmod}}{{ .Lastmod.Format "January 2, 2006" }}{{else}}Unknown{{end}}
+               <!--  {{ .ReadingTime }} minute read --> <!-- Last updated {{if ne .Date .Lastmod}}{{ .Lastmod.Format "January 2, 2006" }}{{else}}Unknown{{end}} -->
             </p>
         </div>
     </li>

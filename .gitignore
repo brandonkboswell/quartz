@@ -1,7 +1,10 @@
 .DS_Store
 public
+public/*
+node_modules
 resources
 .idea
 content/.obsidian
+content/*
 data/linkIndex.yaml
 data/contentIndex.yaml
