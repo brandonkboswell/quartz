@@ -18,8 +18,8 @@ ignoreFiles = [
   "/content/.trash/*",
   "/content/.obsidian/*"
 ]
-summaryLength = 20
-paginate = 20
+summaryLength = 30
+paginate = 30
 enableGitInfo = true
 
 [markup]
