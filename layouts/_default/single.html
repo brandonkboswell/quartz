@@ -19,6 +19,7 @@
           Published {{ .Date.Format "January 2, 2006" }}
         </p>
       {{end}}
+
       {{if ne .Date .Lastmod}}
         <p class="meta">
           Last Updated {{ .Lastmod.Format "January 2, 2006" }}
@@ -52,6 +53,11 @@
                 {{$temp_content = ($temp_content | replaceRE (printf "[\\[]{0,2}%s[\\]]{0,2}" $page_title)  (printf "<strong style='color:#07add9;'>%s</strong>" $page_title ))}}
             {{end}}
         {{end}}
+
+        {{if .Params.youtube}}
+          <div class=iframe-container><iframe width="560" height="315" src="https://www.youtube.com/embed/{{.Params.youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        {{end}}
+
         {{$temp_content  | safeHTML}}
 
     </article>
