@@ -8,3 +8,5 @@ content/.obsidian
 content/*
 data/linkIndex.yaml
 data/contentIndex.yaml
+data/contentIndex.json
+data/linkIndex.json
