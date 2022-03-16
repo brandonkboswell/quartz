@@ -7,8 +7,8 @@ setopt localoptions rmstarsilent; rm -fr ~/Sites/quartz/content/*; rm -rf ~/Site
 # Deprecated
 fswatch -orv ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/bkb | xargs -n1 -I{} ~/Sites/quartz/compile.sh
 
-# Watch for Changes
-nodemon -w ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/bkb -x "~/Sites/quartz/compile.sh" -e ".md"
+# Load Go (if you don't already have that in your PATH); Watch for Changes
+export GOPATH=/Users/$USER/go; export GOROOT="$(/usr/local/bin/brew --prefix golang)/libexec"; export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"; cd ~/Sites/quartz; nodemon -w ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/bkb -w ~/Sites/quartz/layouts -w ~/Sites/quartz/config.toml -x "~/Sites/quartz/compile.sh" -e md,html
 
 # Run Server
 cd ~/Sites/quartz/public; python3 -m http.server
