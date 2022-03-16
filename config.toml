@@ -4,20 +4,6 @@ googleAnalytics = "G-V9PR00CYK8"
 pygmentsUseClasses = true
 relativeURLs = true
 disablePathToLower = true
-ignoreFiles = [
-  "/content/templates/*",
-  "/content/private/*",
-  "/content/1-1/*",
-  "/content/business/*",
-  "/content/collections/*",
-  "/content/people/*",
-  "/content/to_publish/*",
-  "/content/files/*",
-  "/content/temporal/*",
-  "/content/personal/*",
-  "/content/.trash/*",
-  "/content/.obsidian/*"
-]
 summaryLength = 30
 paginate = 30
 enableGitInfo = true
