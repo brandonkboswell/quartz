@@ -1,18 +1,11 @@
-{{- $url := urls.Parse .Destination -}}
-{{- $scheme := $url.Scheme -}}
-
-<a href="
-  {{- if eq $scheme "" -}}
-    {{- if strings.HasSuffix $url.Path ".md" -}}
-      {{- relref .Page .Destination | safeURL -}}
-    {{- else -}}
-      {{- .Destination | safeURL -}}
-    {{- end -}}
-  {{- else -}}
-    {{- .Destination | safeURL -}}
-  {{- end -}}"
-  {{- with .Title }} title="{{ . | safeHTML }}"{{- end -}}>
-  {{- .Text | safeHTML -}}
-</a>
-
-{{- /* whitespace stripped here to avoid trailing newline in rendered result caused by file EOL */ -}}
+{{$trimmed := strings.TrimSuffix ".md" (.Destination | safeURL)}}
+{{$dashedurl := replace $trimmed "%20" "-" }}
+{{$external := strings.HasPrefix $dashedurl "http" }}
+{{- if $external -}}
+<a href="{{ $dashedurl }}" rel="noopener">{{ .Text | safeHTML }}</a>
+{{- else -}}
+{{$spacedurl := replace $trimmed "%20" " " }}
+{{$fixedUrl := (cond (hasPrefix $spacedurl "/") $spacedurl (print "/" $spacedurl)) | urlize}}
+{{$rooted := default $spacedurl (strings.TrimRight "/" (.Page.GetPage $spacedurl).RelPermalink) }}
+<a href="{{$rooted}}" rel="noopener" class="internal-link" data-src="{{$rooted}}">{{ .Text | safeHTML }}</a>
+{{- end -}}
