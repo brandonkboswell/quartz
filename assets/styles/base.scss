@@ -6,7 +6,7 @@
   --lt-colours-gray: var(--outlinegray) !important;
 }
 
-h1, h2, h3, h4, ol, ul, thead {
+h1, h2, h3, h4, h5, h6, ol, ul, thead {
   font-family: Inter;
   color: var(--dark);
   font-weight: revert;
@@ -79,10 +79,6 @@ p, tbody, li {
   font-family: Source Sans Pro;
   color: var(--gray);
   line-height: 1.5em;
-}
-
-h2, h3 {
-  opacity: 0.9;
 }
 
 blockquote {
@@ -187,6 +183,10 @@ article {
       border-radius: 3px;
     }
   }
+  
+  & p {
+    overflow-wrap: anywhere;
+  }
 }
 
 .backlinks a {
@@ -229,13 +229,22 @@ code {
 
 html {
   scroll-behavior: smooth;
+
+  &:lang(ar) {
+    & p, & h1, & h2, & h3, article {
+      direction: rtl;
+      text-align: right;
+    }
+  }
 }
 
 body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  //overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: var(--light);
 }
 
@@ -265,10 +274,10 @@ hr {
 }
 
 .singlePage {
-  margin: 4em 30vw;
+  padding: 4em 30vw;
 
   @media all and (max-width: 1200px) {
-    margin: 25px 5vw;
+    padding: 25px 5vw;
   }
 }
 
@@ -467,8 +476,9 @@ header {
 .popover {
   z-index: 999;
   position: absolute;
-  width: 15em;
-  display: inline;
+  width: 20em;
+  display: inline-block;
+  visibility: hidden;
   background-color: var(--light);
   padding: 1em;
   border: 1px solid var(--outlinegray);
@@ -480,17 +490,29 @@ header {
   transition-delay: 0.3s;
   user-select: none;
 
+  @media all and (max-width: 600px) {
+    display: none;
+  }
+
   &.visible {
     opacity: 1;
+    visibility: visible;
     transform: translate(-50%, 20%);
   }
 
   & > h3 {
-    margin: 0.5em 0;
+    font-size: 1rem;
+    margin: 0.25em 0;
+  }
+
+  & > .meta {
+    margin-top: 0.25em;
+    opacity: 0.5;
   }
 
   & > p {
     margin: 0;
     font-weight: 400;
+    user-select: none;
   }
 }
