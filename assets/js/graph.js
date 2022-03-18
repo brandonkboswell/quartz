@@ -127,7 +127,11 @@ async function drawGraph(url, baseUrl, pathColors, depth, enableDrag, enableLege
     .attr("fill", color)
     .style("cursor", "pointer")
     .on("click", (_, d) => {
-      window.location.href = baseUrl + '/' + decodeURI(d.id).replace(/\s+/g, '-')
+      // Replace any leading slashes in the ID that might cause it to end up with a double //
+      let slug = decodeURI(d.id).replace(/\s+/g, '-')
+      slug = slug.replace(/^\/+/g, '')
+      let myUrl = baseUrl + '/' + slug
+      window.location.href = myUrl
     })
     .on("mouseover", function(_, d) {
       d3.selectAll(".node")
