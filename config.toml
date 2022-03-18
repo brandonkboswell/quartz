@@ -1,4 +1,5 @@
 baseURL = "https://brandonkboswell.com"
+# baseURL = "http://localhost:8000"
 languageCode = "en-us"
 googleAnalytics = "G-V9PR00CYK8"
 pygmentsUseClasses = true
