@@ -8,6 +8,7 @@ disablePathToLower = true
 summaryLength = 30
 paginate = 30
 enableGitInfo = true
+rssLimit = 25
 
 [markup]
     [markup.tableOfContents]

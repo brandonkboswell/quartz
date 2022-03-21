@@ -1,12 +1,13 @@
 <!-- Contact Info -->
 <div id="contact_buttons">
     <footer>
-        <p>{{ $.Site.Data.config.name }}, © {{ dateFormat "2006" now }}</p>
         {{ if not .IsHome }}
         <a href="/">Home</a>
         {{end}}
         {{- range $.Site.Data.config.links -}}
         <a href="{{.link}}">{{.link_name}}</a>
         {{- end -}}
+
+        <p>Made with ♥ in Richmond, VA <br /> © {{ dateFormat "2006" now }} {{ $.Site.Data.config.name }}</p>
     </footer>
 </div>
