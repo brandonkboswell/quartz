@@ -4,6 +4,9 @@
     <meta name="description" content="{{if .IsHome}}{{$.Site.Data.config.description}}{{else}}{{.Summary}}{{end}}">
     <title>{{ if .Title }}{{ .Title }}{{ else }}{{ $.Site.Data.config.page_title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
     <link rel="shortcut icon" type="image/png" href="/icon.png" />
 
     <!-- CSS Stylesheets and Fonts -->
