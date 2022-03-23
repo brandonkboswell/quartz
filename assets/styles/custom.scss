@@ -22,3 +22,10 @@
   --lightgray: #292633 !important;
   --outlinegray: #343434 !important;
 }
+
+.logo-background {
+  background-image: url(/logo.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom 14px;
+  background-size: 180px;
+}
