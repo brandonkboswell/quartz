@@ -7,7 +7,7 @@
     {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
-    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="{{$.Site.BaseURL}}/icon.png" />
 
     <!-- CSS Stylesheets and Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     {{ $darkMode := resources.Get "js/darkmode.js" |  resources.Fingerprint "md5" | resources.Minify }}
     <script src="{{$darkMode.Permalink}}"></script>
+    {{partial "katex.html" .}}
 
     <!--  Preload page vars  -->
     {{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint "md5" | resources.Minify |  }}

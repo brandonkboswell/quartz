@@ -30,36 +30,8 @@
           <!-- <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li> -->
           {{ end }}
       </ul>
-      {{ if (and $.Site.Data.config.enableToc (not (.Params.disableToc))) }}
-      <aside class="mainTOC">
-          <h3>Table of Contents</h3>
-          {{ .TableOfContents }}
-      </aside>
-      {{end}}
-
-       {{$wikilinks := .Content | findRE "[\\[]{2}([A-Za-z0-9\\s]+)[\\]]{2}" }}
-        {{$temp_content := $.Content}}
-        {{range $wikilinks}}
-            {{$match := "0"}}
-            {{$page_title := . | strings.TrimPrefix "[[" | strings.TrimSuffix "]]" }}
-            {{$human_title := humanize $page_title}}
-            {{$lower_title := lower $page_title}}
-            {{$title_array := (slice $page_title $human_title $lower_title)}}
-            {{range first 1 (where site.Pages "Params.title" "in" $title_array)}}
-                {{$temp_content = ($temp_content | replaceRE (printf "[\\[]{0,2}%s[\\]]{0,2}" $page_title) (printf "<a href=\"%s\">%s</a>" .Permalink $page_title) )}}
-                {{$match = "1"}}
-            {{end}}
-            {{if ne $match "1"}}
-                {{$temp_content = ($temp_content | replaceRE (printf "[\\[]{0,2}%s[\\]]{0,2}" $page_title)  (printf "<strong style='color:#07add9;'>%s</strong>" $page_title ))}}
-            {{end}}
-        {{end}}
-
-        {{if .Params.youtube}}
-          <div class=iframe-container><iframe width="560" height="315" src="https://www.youtube.com/embed/{{.Params.youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        {{end}}
-
-        {{$temp_content  | safeHTML}}
-
+      {{partial "toc.html" .}}
+      {{partial "textprocessing.html" . }}
     </article>
     {{partial "footer.html" .}}
     {{partial "popover.html" .}}
