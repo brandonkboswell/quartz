@@ -6,6 +6,7 @@ pygmentsUseClasses = true
 relativeURLs = false
 disablePathToLower = true
 summaryLength = 30
+pluralizeListTitles = false
 paginate = 30
 enableGitInfo = true
 rssLimit = 25
