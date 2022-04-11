@@ -30,6 +30,9 @@
           <!-- <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li> -->
           {{ end }}
       </ul>
+      {{if .Params.youtube}}
+        <div class=iframe-container><iframe width="560" height="315" src="https://www.youtube.com/embed/{{.Params.youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      {{end}}
       {{partial "toc.html" .}}
       {{partial "textprocessing.html" . }}
     </article>
