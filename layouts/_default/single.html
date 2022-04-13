@@ -7,7 +7,8 @@
 <div class="singlePage logo-background">
     <!-- Begin actual content -->
     <header>
-      <h1 id="page-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Data.config.page_title }}</a></h1>
+      {{partial "logo.html" .}}
+      <!-- <h1 id="page-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Data.config.page_title }}</a></h1> -->
       <div class="spacer"></div>
       <svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
       {{partial "darkmode.html" .}}
@@ -30,12 +31,16 @@
           <!-- <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li> -->
           {{ end }}
       </ul>
-      {{if .Params.youtube}}
-        <div class=iframe-container><iframe width="560" height="315" src="https://www.youtube.com/embed/{{.Params.youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      {{end}}
+
+      {{partial "yt.html" .}}
       {{partial "toc.html" .}}
       {{partial "textprocessing.html" . }}
+
+
     </article>
+
+    <!-- {{partial "comments.html" .}} -->
+    {{partial "outreach.html" .}}
     {{partial "footer.html" .}}
     {{partial "popover.html" .}}
 </div>
