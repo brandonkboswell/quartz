@@ -51,8 +51,8 @@ html {
 }
 
 header {
-  height: 80px;
-  margin-bottom: 12px;
+  height: 104px;
+  margin-bottom: 3em;
 }
 
 .header_logo img {
@@ -75,7 +75,7 @@ header>svg {
   display: inline-block;
   border-radius: 8px;
   position: relative;
-  top: 5px;
+  top: 12px;
 }
 
 .outreach {
@@ -83,8 +83,33 @@ header>svg {
   border-bottom: 1px solid var(--outlinegray);
   margin: 40px auto;
   padding: 12px 0px;
+  text-align: center;
 
   h3 {
     margin-bottom: 0px;
   }
+}
+
+footer {
+  margin-top: 2em;
+}
+
+.formkit-guarantee {
+  display: none;
+}
+
+.formkit-form {
+  background: none !important;
+}
+
+.formkit-powered-by-convertkit-container {
+  display: none !important;
+}
+
+.formkit-form[data-uid="498077a8fd"][min-width~="600"] [data-style="minimal"] {
+  padding: 0px 20px 15px 20px !important;
+}
+
+.formkit-form[data-uid="498077a8fd"] {
+  max-width: 100% !important;
 }
