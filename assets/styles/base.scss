@@ -12,6 +12,19 @@ h1, h2, h3, h4, h5, h6, ol, ul, thead {
   font-weight: revert;
   margin: revert;
   padding: revert;
+
+  &:hover > .hanchor {
+    opacity: 1;
+  }
+}
+
+.hanchor {
+  font-family: Inter;
+  margin-left: -1em;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  color: var(--secondary);
+
 }
 
 p, ul, text {
@@ -329,6 +342,12 @@ hr {
   & #graph-container {
     border: var(--outlinegray) 1px solid;
     border-radius: 5px;
+    box-sizing: border-box;
+
+    & > svg {
+      margin-bottom: -5px;
+
+    }
   }
 }
 
@@ -526,7 +545,7 @@ header {
   box-shadow: 6px 6px 36px 0px rgba(0,0,0,0.25);
 
   @media all and (max-width: 600px) {
-    display: none;
+    display: none !important;
   }
 
   &.visible {

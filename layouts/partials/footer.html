@@ -1,7 +1,5 @@
 {{ if ((not (.Params.disableGraph))) }}
     {{ if ne .File.Dir "blog/" }}
-      {{ if ne .File.Dir "moc/" }}
-
         <div class="page-end">
             <div class="backlinks-container">
                 {{partial "backlinks.html" .}}
@@ -10,7 +8,6 @@
                 {{partial "graph.html" .}}
             </div>
         </div>
-      {{end}}
   {{end}}
 {{end}}
 
