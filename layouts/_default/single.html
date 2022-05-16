@@ -35,12 +35,26 @@
       {{partial "yt.html" .}}
       {{partial "toc.html" .}}
       {{partial "textprocessing.html" . }}
-
-
     </article>
-
-    {{partial "footer.html" .}}
-    {{partial "popover.html" .}}
 </div>
+
+{{ if ((not (.Params.disableGraph))) }}
+  {{ if ne .File.Dir "blog/" }}
+    <div class="page-end">
+      <div class="backlinks-container">
+        {{partial "backlinks.html" .}}
+      </div>
+      <div>
+        {{partial "graph.html" .}}
+      </div>
+    </div>
+  {{end}}
+{{end}}
+
+<div class="footer">
+  {{partial "footer.html" .}}
+  {{partial "popover.html" .}}
+</div>
+
 </body>
 </html>

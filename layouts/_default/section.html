@@ -17,9 +17,11 @@
         {{partial "page-list.html" .Paginator.Pages.ByLastmod.Reverse }}
         {{ template "_internal/pagination.html" .}}
     </article>
-    {{partial "contact.html" .}}
 </div>
-{{partial "popover.html" .}}
-</body>
 
+<div class="footer">
+  {{partial "contact.html" .}}
+  {{partial "popover.html" .}}
+</div>
+</body>
 </html>

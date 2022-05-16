@@ -1,16 +1,3 @@
-{{ if ((not (.Params.disableGraph))) }}
-    {{ if ne .File.Dir "blog/" }}
-        <div class="page-end">
-            <div class="backlinks-container">
-                {{partial "backlinks.html" .}}
-            </div>
-            <div>
-                {{partial "graph.html" .}}
-            </div>
-        </div>
-  {{end}}
-{{end}}
-
 {{ if ((not (.Params.disableOutreach))) }}
   {{partial "outreach.html" .}}
 {{end}}
