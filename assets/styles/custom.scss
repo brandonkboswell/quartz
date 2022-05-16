@@ -186,3 +186,17 @@ footer {
 article>.meta {
   margin: -12px 0 1em;
 }
+
+.section-li {
+  h3 {
+    margin-top: 0px;
+  }
+
+  p {
+    margin-bottom: 0px
+  }
+}
+
+.section-ul>li{
+  padding: 1em;
+}
