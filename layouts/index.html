@@ -13,14 +13,15 @@
         {{partial "darkmode.html" .}}
     </header>
     <article>
-        {{partial "toc.html" .}} 
+        {{partial "toc.html" .}}
         {{partial "textprocessing.html" . }}
+        {{if $.Site.Data.config.enableRecentNotes}}
+          {{partial "recent.html" . }}
+        {{end}}
     </article>
 </div>
 <div class="footer">
   {{partial "footer.html" .}}
-  {{partial "popover.html" .}}
 </div>
 </body>
 </html>
-

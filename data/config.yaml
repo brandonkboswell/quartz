@@ -1,6 +1,9 @@
 name: Brandon Boswell
 enableToc: false
 enableLinkPreview: false
+enableSPA: true
+enableContextualBacklinks: true
+enableRecentNotes: false
 description:
   Full Stack, UI/UX Designer and Front End Developer
 page_title:

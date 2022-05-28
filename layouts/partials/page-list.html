@@ -11,11 +11,17 @@
                       {{strings.TrimSuffix ".md" $fileName}}
                   {{end}}
                 </a></h3>
-                <!-- <p>{{- .Summary -}}{{if .Truncated}}...{{end}}</p> -->
+<!--                 <ul class="tags">
+                    {{ range (.GetTerms "tags") }}
+                    <li><a href="{{ .Permalink }}">{{ .LinkTitle | title}}</a></li>
+                    {{ end }}
+                </ul>
+                <p>{{- .Summary -}}{{if .Truncated}}...{{end}}</p> -->
             </div>
             <p class="meta">
                <!--  {{ .ReadingTime }} minute read --> <!-- Last updated {{if ne .Date .Lastmod}}{{ .Lastmod.Format "January 2, 2006" }}{{else}}Unknown{{end}} -->
             </p>
+
         </div>
     </li>
     {{- end -}}

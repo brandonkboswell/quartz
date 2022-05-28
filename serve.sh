@@ -1,5 +1,5 @@
 #!/bin/bash
 
 (while true; do
-  hugo server --disableFastRender
+  hugo server
 done) &
