@@ -4,7 +4,7 @@
 
 <body>
 {{partial "search.html" .}}
-<div class="singlePage logo-background">
+<div class="bodyContent"><div class="singlePage logo-background">
     <!-- Begin actual content -->
     <header>
         <h1 id="page-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Data.config.page_title }}</a></h1>
@@ -18,7 +18,7 @@
         {{ template "_internal/pagination.html" . }}
     </article>
     {{partial "contact.html" .}}
-</div>
+</div></div>
 </body>
 
 </html>

@@ -4,7 +4,8 @@
 
 <body>
 {{partial "search.html" .}}
-<div class="singlePage logo-background">
+<div class="bodyContent">
+  <div class="singlePage logo-background">
     <!-- Begin actual content -->
     <header>
         {{partial "logo.html" .}}
@@ -18,7 +19,7 @@
         {{partial "page-list.html" .Paginator.Pages.ByLastmod.Reverse }}
         {{ template "_internal/pagination.html" .}}
     </article>
-</div>
+</div></div>
 
 <div class="footer">
   {{partial "contact.html" .}}

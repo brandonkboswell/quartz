@@ -8,7 +8,7 @@ export const attachSPARouting = (draw) => {
     reload,
     prefetch,
   };
-  router(".singlePage")
+  router(".bodyContent")
   // We need on initial load, then subsequent redirs
   // requestAnimationFrame() delays graph draw until SPA routing is finished
   reload(draw)
