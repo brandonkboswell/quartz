@@ -57,7 +57,7 @@ hr {
 
 header {
   height: 104px;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .header_logo img {
@@ -185,7 +185,7 @@ footer {
 }
 
 article>.meta {
-  margin: -12px 0 1em;
+  margin: 0px 0 1em;
 }
 
 .section-li {
@@ -200,4 +200,26 @@ article>.meta {
 
 .section-ul>li{
   padding: 1em;
+}
+
+article > h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  // max-width: 80%;
+  font-size: 3em;
+  line-height: 1;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.1em !important;
+}
+
+article > p.meta {
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2em;
 }
