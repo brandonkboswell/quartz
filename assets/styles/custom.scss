@@ -23,15 +23,9 @@
   --outlinegray: #343434 !important;
 }
 
-.logo-background {
-  // background-image: url(/background_logo.png);
-  // background-repeat: no-repeat;
-  // background-position: left -4px bottom 14px;
-  // background-size: 180px;
-}
-
 html {
   font-size: 18px;
+  background-color: #FFFCF0;
 }
 
 hr {
@@ -81,8 +75,7 @@ header {
 
 #search-container {
   transition: all .2s ease-in-out;
-  background: rgba(255, 255, 255, .90)
-
+  background-color: rgba(255,252,240,0.9);
 }
 
 #search-container>div>input {
@@ -159,7 +152,7 @@ footer {
 
 .footer {
   border-top: 1px solid var(--outlinegray);
-  background-color: var(--light);
+  background-color: #F2F0E5;
   padding: 25px 30vw;
 
   @media all and (max-width: 1200px) {
@@ -168,10 +161,11 @@ footer {
 }
 
 .page-end {
-  border-top: 1px solid var(--outlinegray);
-  background-color: #fafeff;
+  // border-top: 1px solid var(--outlinegray);
+  // background-color: #fafeff;
   // padding: 4em 30vw;
-  padding: 25px 30vw;
+  padding: 0 30vw 20px;
+
   h3 {
     margin-block-start: 0px;
   }
@@ -181,10 +175,10 @@ footer {
   }
 
   #graph-container {
-    background: white;
+    background: rgba(255,255,255,.5);
   }
   .backlinks-container li {
-    background: white;
+    background: rgba(255,255,255,.5);
   }
 }
 
@@ -319,6 +313,6 @@ article {
 }
 
 form.formkit-form {
-  background: rgba(255, 255, 255, .45) !important;
+  background: #FEFCF6 !important;
   box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, .05);
 }
