@@ -82,8 +82,12 @@ header {
   padding: 0.75em 1em;
 }
 
-#search-container>div>* {
-  border-radius: 5em;
+// #search-container>div>* {
+//   border-radius: 5em;
+// }
+
+#search-bar {
+  border-radius: 5em !important;
 }
 
 .singlePage {
@@ -104,6 +108,17 @@ header>svg {
   border-radius: 8px;
   position: relative;
   top: 12px;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.margin-top-2x {
+  margin-top: 20px;
 }
 
 .outreach {
@@ -220,6 +235,11 @@ article>.meta {
   p {
     margin-bottom: 0px
   }
+}
+
+a.page-list__page {
+  font-weight: normal;
+  font-weight: 300;
 }
 
 .section-ul>li{
