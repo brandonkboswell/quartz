@@ -1,0 +1,47 @@
+footer {
+  margin-top: 2em;
+}
+
+.footer {
+  border-top: 1px solid var(--outlinegray);
+  background-color: #F2F0E5;
+  padding: 25px 30vw;
+
+  @media all and (max-width: 1200px) {
+    padding: 25px 5vw;
+  }
+}
+
+.page-end {
+  padding: 0 30vw 20px;
+
+  h3 {
+    margin-block-start: 0px;
+  }
+
+  @media all and (max-width: 1200px) {
+    padding: 25px 5vw;
+  }
+
+  #graph-container {
+    background: rgba(255,255,255,.5);
+  }
+  .backlinks-container li {
+    background: rgba(255,255,255,.5);
+  }
+}
+
+.outreach {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--gray);
+  fill: var(--gray);
+  font-weight: revert;
+  margin: revert;
+  padding: 12px 0px;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 0px;
+    margin-block-start: 0px;
+  }
+}

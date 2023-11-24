@@ -1,0 +1,24 @@
+form.formkit-form {
+  background: #FEFCF6 !important;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, .05);
+}
+
+.formkit-guarantee {
+  display: none;
+}
+
+.formkit-form {
+  background: none !important;
+}
+
+.formkit-powered-by-convertkit-container {
+  display: none !important;
+}
+
+.formkit-form[data-uid="498077a8fd"][min-width~="600"] [data-style="minimal"] {
+  padding: 0px 20px 15px 20px !important;
+}
+
+.formkit-form[data-uid="498077a8fd"] {
+  max-width: 100% !important;
+}

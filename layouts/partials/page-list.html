@@ -1,23 +1,25 @@
-<div class="page-list margin-top-2x">
+<div class="page-list mt-5">
     {{- range . -}}
     <a href="{{ .Permalink }}" class="page-list__page">
-        <div class="section">
+        <div class="section mb-14">
             <div class="desc">
-                <h3>
-                  {{if .Title}}
-                      {{- .Title -}}
-                  {{else}}
-                      {{ $fileName := path.Base .File.Path}}
-                      {{strings.TrimSuffix ".md" $fileName}}
-                  {{end}}
-                </h3>
-                {{if  .Date }}<p class="margin-bottom">{{.Date.Format "January 2, 2006" }}</p> {{else}}{{end}}
-                <p>{{- .Summary -}}{{if .Truncated}}...{{end}}</p>        
+                <div class="card-header mb-2.5 inline-block">
+                    <div class="grow font-bold text-xl align-text-bottom leading-6">
+                        {{if .Title}}
+                            {{- .Title -}}
+                        {{else}}
+                            {{ $fileName := path.Base .File.Path}}
+                            {{strings.TrimSuffix ".md" $fileName}}
+                        {{end}}
+                    </div>
+                    {{if  .Date }}<div class="shrink text-sm align-text-bottom italic whitespace-nowrap mt-2 text-gray-500 leading-6">{{.Date.Format "January 2, 2006" }}</div> {{else}}{{end}}
+                </div>
+            <p>{{- .Summary -}}{{if .Truncated}}..{{end}}</p>
             </div>
-            <p class="meta margin-top">
-                <a href="{{ .Permalink }}"> Read More</a>
+            <div class="meta mt-4">
+                <a class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" href="{{ .Permalink }}"> Read More</a>
                 <!-- {{ .ReadingTime }} minute read --> <!-- Last updated {{if ne .Date .Lastmod}}{{ .Lastmod.Format "January 2, 2006" }}{{else}}Unknown{{end}} -->
-            </p>
+            </div>
         </a>
     </div>
     {{- end -}}

@@ -8,3 +8,4 @@ assets/indices/linkIndex.json
 assets/indices/contentIndex.json
 content/.obsidian
 content/*
+static/tailwind.css

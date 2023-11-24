@@ -11,14 +11,14 @@
         {{partial "logo.html" .}}
         <!-- <h1 id="page-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Data.config.page_title }}</a></h1> -->
         <div class="spacer"></div>
-        <svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+        <svg class="w-9 p-2" tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
         {{partial "darkmode.html" .}}
     </header>
-    <article>
-        <h1>{{.Title}}</h1>
-        {{partial "page-list.html" .Paginator.Pages.ByLastmod.Reverse }}
-        {{ template "_internal/pagination.html" .}}
-    </article>
+    <h1 class="primary text-center">{{.Title}}</h1>
+    <div class="space-y-4 border-t border-gray-200 pt-5 sm:mt-8 sm:pt-8">
+      {{partial "page-list.html" .Paginator.Pages.ByLastmod.Reverse }}
+    </div>
+    {{ template "_internal/pagination.html" .}}
 </div></div>
 
 <div class="footer">

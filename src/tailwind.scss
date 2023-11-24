@@ -1,0 +1,38 @@
+@import './overrides.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './youtube.scss';
+@import './formkit.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul {
+  @apply list-disc;
+}
+
+a {
+  color: var(--secondary);
+}
+
+/* Bring back the default margin of lists */
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+h1.primary {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+}
+
+.card-header {
+  text-wrap: balance;
+}

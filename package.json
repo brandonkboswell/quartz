@@ -1,5 +1,18 @@
 {
   "dependencies": {
     "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "build:css": "postcss src/tailwind.scss --output static/tailwind.css",
+    "watch:css": "postcss -w src/tailwind.scss --output static/tailwind.css",
+    "serve": "hugo server"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.3.5"
   }
 }
