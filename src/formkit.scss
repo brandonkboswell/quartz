@@ -29,5 +29,10 @@ form.formkit-form {
 .formkit-form h4,
 .formkit-form h5 {
   font-weight: 800 !important;
-  @apply leading-8;
+  font-family: "p22-mackinac-pro", serif;
+  font-style: normal;
+  @apply text-blue-950 !important;;
+  @apply text-4xl !important;
+  @apply leading-10;
+  @apply my-2 !important;
 }
