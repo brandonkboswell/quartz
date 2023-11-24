@@ -25,6 +25,7 @@
 html {
   font-size: 18px;
   background-color: hsl(48,60%,98%);
+  @apply bg-zinc-50;
 }
 
 hr {
@@ -41,11 +42,6 @@ p {
 
 .singlePage {
   padding-top: 0px;
-
-  h1,h2,h3,h4,h5 {
-    margin-top: 40px;
-    margin-bottom: 10px;
-  }
 
   ul {
     margin-top: 0px;
@@ -89,18 +85,6 @@ a.page-list__page {
   padding: 1em;
 }
 
-article > h1 {
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-  line-height: 1;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.1em !important;
-  text-wrap: balance;
-}
-
 article > p.meta {
   font-size: 1em;
   margin-left: auto;
@@ -110,14 +94,28 @@ article > p.meta {
   margin-bottom: 2em;
 }
 
+p,
+ul,
+text,
+tbody,
+li,
+article a {
+  font-family: 'Inter', sans-serif;
+  @apply text-zinc-600;
+  @apply fill-zinc-600;
+  font-weight: revert;
+  margin: revert;
+  padding: revert;
+}
+
 article {
   p {
     margin-top: 1.25em;
     margin-bottom: 1.25em;
+    @apply leading-7;
   }
 
   & a {
-    font-family: Source Sans Pro;
     font-weight: 600;
     color: #192845;
     transition: all .2s ease-in-out;

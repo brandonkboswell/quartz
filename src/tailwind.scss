@@ -27,12 +27,57 @@ ul {
   padding-inline-start: 40px;
 }
 
-h1.primary {
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-}
-
 .card-header {
   text-wrap: balance;
+}
+
+article p {
+  margin-top: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+thead {
+  @apply text-zinc-700;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6,
+.article-list h1,
+.article-list h2,
+.article-list h3,
+.article-list h4,
+.article-list h5,
+.article-list h6 {
+  @apply leading-7;
+  @apply mt-4;
+  @apply mb-3;
+  text-wrap: balance;
+
+  font-family: "p22-mackinac-pro", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.article-list .article-title {
+  font-family: "p22-mackinac-pro", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+article h1 {
+  text-align: center;
+  text-wrap: balance;
+  @apply mb-1;
+  @apply leading-8;
 }

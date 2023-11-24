@@ -4,7 +4,7 @@
         <div class="section mb-14">
             <div class="desc">
                 <div class="card-header mb-2.5 inline-block">
-                    <div class="grow font-bold text-xl align-text-bottom leading-6">
+                    <div class="grow font-bold text-xl align-text-bottom leading-6 article-title">
                         {{if .Title}}
                             {{- .Title -}}
                         {{else}}
@@ -12,9 +12,9 @@
                             {{strings.TrimSuffix ".md" $fileName}}
                         {{end}}
                     </div>
-                    {{if  .Date }}<div class="shrink text-sm align-text-bottom italic whitespace-nowrap mt-2 text-gray-500 leading-6">{{.Date.Format "January 2, 2006" }}</div> {{else}}{{end}}
+                    {{if  .Date }}<div class="shrink text-xs align-text-bottom whitespace-nowrap mt-2 text-gray-500 leading-6">{{.Date.Format "January 2, 2006" }}</div> {{else}}{{end}}
                 </div>
-            <p>{{- .Summary -}}{{if .Truncated}}..{{end}}</p>
+            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{{- .Summary -}}{{if .Truncated}}..{{end}}</p>
             </div>
             <div class="meta mt-4">
                 <a class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" href="{{ .Permalink }}"> Read More</a>

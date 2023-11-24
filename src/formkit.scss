@@ -22,3 +22,12 @@ form.formkit-form {
 .formkit-form[data-uid="498077a8fd"] {
   max-width: 100% !important;
 }
+
+.formkit-form h1,
+.formkit-form h2,
+.formkit-form h3,
+.formkit-form h4,
+.formkit-form h5 {
+  font-weight: 800 !important;
+  @apply leading-8;
+}
