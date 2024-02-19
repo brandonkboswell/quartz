@@ -10,6 +10,7 @@
     end }}
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-adsense-account" content="ca-pub-3749220595742937">
   <link
     rel="shortcut icon"
     type="image/png"
@@ -22,15 +23,6 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="https://use.typekit.net/gwr8zni.css">
-
-  {{$sass := resources.Match "styles/[!_]*.scss" }}
-  {{$css := slice }}
-  {{range $sass}}
-  {{$scss := . | resources.ToCSS (dict "outputStyle" "compressed") }}
-  {{$css = $css | append $scss}}
-  {{end}}
-  {{$finalCss := $css | resources.Concat "styles.css" | resources.Fingerprint "md5" | resources.Minify  }}
-  <link href="{{$finalCss.Permalink}}" rel="stylesheet" />
   <link rel="stylesheet" href="/tailwind.css">
   {{partial "katex.html" .}}
 

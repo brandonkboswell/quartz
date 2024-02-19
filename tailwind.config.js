@@ -20,6 +20,7 @@ module.exports = {
     files: [
       "./content/*.md",
       "./layouts/**/*.html",
+      "./static/**/*.html",
     ],
   },
   safelist: [

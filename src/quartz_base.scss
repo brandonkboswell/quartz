@@ -172,8 +172,8 @@ article {
   }
 
   & a {
-    font-family: Source Sans Pro;
-    font-weight: 600;
+    /* font-family: Source Sans Pro; */
+    /* font-weight: 600; */
 
     &.internal-link {
       text-decoration: none;
@@ -184,11 +184,11 @@ article {
 
       &.broken {
         opacity: 0.5;
-        background-color: transparent; 
+        background-color: transparent;
       }
     }
   }
-  
+
   & p {
     overflow-wrap: anywhere;
   }
@@ -225,7 +225,7 @@ article {
 }
 
 .backlinks a {
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 0.9rem;
 }
 
@@ -235,9 +235,9 @@ sup > a {
 }
 
 a {
-  font-family: Inter, sans-serif;
+  /* font-family: Inter, sans-serif; */
   font-size: 1em;
-  font-weight: 700;
+  /* font-weight: 700; */
   text-decoration: none;
   transition: all 0.2s ease;
   color: var(--secondary);
@@ -277,7 +277,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  //overflow-x: hidden;
+  /* overflow-x: hidden; */
   max-width: 100%;
   box-sizing: border-box;
 
@@ -293,7 +293,7 @@ footer {
   text-align: center;
   & ul {
     padding-left: 0;
-  } 
+  }
 }
 
 hr {
@@ -451,7 +451,6 @@ header {
         border-bottom: none;
         width: 100%;
 
-        // normalize button props
         font-family: inherit;
         font-size: 100%;
         line-height: 1.15;

@@ -5,16 +5,20 @@ enableSPA: false
 enableContextualBacklinks: true
 enableRecentNotes: false
 description:
-  Full Stack, UI/UX Designer and Front End Developer
+  Product Designer and Full Stack Software Engineer
 page_title:
   "Brandon K Boswell"
 links:
   - link_name: Blog
     link: /blog/
-  - link_name: Twitter
-    link: https://twitter.com/brandonkboswell
+  - link_name: Newsletter
+    link: https://subscribe.theknowledgework.co/
   - link_name: YouTube
     link: https://youtube.com/brandonkboswell
+  - link_name: Discord
+    link: https://link.brandonkboswell.com/knowledge-worker-discord
+  - link_name: Twitter
+    link: https://twitter.com/brandonkboswell
   - link_name: Github
     link: https://github.com/brandonkboswell
   - link_name: Email

@@ -38,7 +38,7 @@ header {
   padding: 0.75em 1em;
 }
 
-body::before {
+html::before {
     content: '';
     border-top: 12px solid #413934;
     z-index: 100000;
